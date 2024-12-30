@@ -3,13 +3,13 @@
       <h2>Nuestras Marcas Asociadas</h2>
       <div class="carousel">
         <div class="carousel-item">
-          <img src="@/assets/f7.jpeg" alt="Marca 1" />
+          <img src="/f7.jpeg" alt="Marca 1" />
         </div>
         <div class="carousel-item">
-          <img src="@/assets/f5.jpeg" alt="Marca 2" />
+          <img src="/f5.jpeg" alt="Marca 2" />
         </div>
         <div class="carousel-item">
-          <img src="@/assets/f6.jpeg" alt="Marca 3" />
+          <img src="/f6.jpeg" alt="Marca 3" />
         </div>
       </div>
     </section>

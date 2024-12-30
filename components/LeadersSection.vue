@@ -24,19 +24,19 @@ onMounted(() => {
     <h2>Nuestros Líderes</h2>
     <div class="carousel">
       <div class="carousel-item">
-        <img src="@/assets/f1.jpeg" alt="Líder 1" />
+        <img src="/f1.jpeg" alt="Líder 1" />
         <p>Gerson</p>
       </div>
       <div class="carousel-item">
-        <img src="@/assets/f2.jpeg" alt="Líder 2" />
+        <img src="/f2.jpeg" alt="Líder 2" />
         <p>Leonardo</p>
       </div>
       <div class="carousel-item">
-        <img src="@/assets/f3.jpeg" alt="Líder 3" />
+        <img src="/f3.jpeg" alt="Líder 3" />
         <p>Nicolas</p>
       </div>
       <div class="carousel-item">
-        <img src="@/assets/f4.jpeg" alt="Líder 3" />
+        <img src="/f4.jpeg" alt="Líder 3" />
         <p>Juan David</p>
       </div>
     </div>
