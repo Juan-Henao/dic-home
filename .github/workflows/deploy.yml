@@ -26,6 +26,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
+        
+    - name: Install Specific Module
+      run: pnpm add @nuxtjs/i18n
 
     - name: Install & Generate 🔧
       run: |
