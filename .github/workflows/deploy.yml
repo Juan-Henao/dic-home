@@ -9,45 +9,33 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # Verifica el código
       - uses: actions/checkout@v4
-      
-      # Habilita Corepack
       - run: corepack enable
-      
-      # Configura Node.js y habilita caché para PNPM
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "pnpm"
-
-      # Instala PNPM y las dependencias
-      - name: Setup PNPM
-        uses: pnpm/action-setup@v2
-        with:
-          version: 7
-      - run: pnpm install
-
-      # Construye el proyecto para GitHub Pages
-      - run: pnpx nuxt build --preset github_pages
-
-      # Sube los artefactos generados
+      # Pick your own package manager and build script
+      - run: npm install
+      - run: npx nuxt build --preset github_pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./.output/public
-
+  # Deployment job
   deploy:
+    # Add a dependency to the build job
     needs: build
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
-      pages: write      # Permiso para desplegar en GitHub Pages
-      id-token: write   # Permiso para validar el origen del despliegue
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+    # Deploy to the github_pages environment
     environment:
       name: github_pages
       url: ${{ steps.deployment.outputs.page_url }}
+    # Specify runner + deployment step
     runs-on: ubuntu-latest
     steps:
-      # Despliega a GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
