@@ -1,8 +1,8 @@
 <template>
   <header>
-    <h1>{{ $t('welcome') }}</h1>
+    <h1>Bienvenido a Defense Innovation Corp</h1>
     
-    <a href="#services">{{ $t('explore') }}</a>
+    <a href="#services">Explora Nuestras Soluciones</a>
   </header>
 </template>
 
