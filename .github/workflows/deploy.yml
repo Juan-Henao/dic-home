@@ -1,40 +1,53 @@
-name: Build and Deploy
-on: 
+# https://github.com/actions/deploy-pages#usage
+name: Deploy to GitHub Pages
+on:
+  workflow_dispatch:
   push:
     branches:
       - main
-permissions:
-  contents: write
 jobs:
-  build-and-deploy:
-    concurrency: ci-${{ github.ref }}
+  build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20]
     steps:
-    - name: Checkout 🛎️
-      uses: actions/checkout@v3
+      # Verifica el código
+      - uses: actions/checkout@v4
+      
+      # Habilita Corepack
+      - run: corepack enable
+      
+      # Configura Node.js y habilita caché para PNPM
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "pnpm"
 
-    - name: Setup PNPM
-      uses: pnpm/action-setup@v2
-      with:
-        version: 7
+      # Instala PNPM y las dependencias
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+      - run: pnpm install
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'pnpm'
+      # Construye el proyecto para GitHub Pages
+      - run: pnpx nuxt build --preset github_pages
 
-    - name: Install & Generate 🔧
-      run: |
-        pnpm install
-        pnpm generate
-      env:
-        NUXT_APP_BASE_URL: ${{ vars.NUXT_APP_BASE_URL  }}
+      # Sube los artefactos generados
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./.output/public
 
-    - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        folder: dist
+  deploy:
+    needs: build
+    permissions:
+      pages: write      # Permiso para desplegar en GitHub Pages
+      id-token: write   # Permiso para validar el origen del despliegue
+    environment:
+      name: github_pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      # Despliega a GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
