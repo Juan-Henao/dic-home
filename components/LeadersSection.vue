@@ -24,19 +24,19 @@ onMounted(() => {
     <h2>Nuestros Líderes</h2>
     <div class="carousel">
       <div class="carousel-item">
-        <img src="/f1.jpeg" alt="Líder 1" />
+        <img src="https://picsum.photos/1920/1080?random=1" alt="Líder 1" />
         <p>Gerson</p>
       </div>
       <div class="carousel-item">
-        <img src="/f2.jpeg" alt="Líder 2" />
+        <img src="https://picsum.photos/1920/1080?random=2" alt="Líder 2" />
         <p>Leonardo</p>
       </div>
       <div class="carousel-item">
-        <img src="/f3.jpeg" alt="Líder 3" />
+        <img src="https://picsum.photos/1920/1080?random=3" alt="Líder 3" />
         <p>Nicolas</p>
       </div>
       <div class="carousel-item">
-        <img src="/f4.jpeg" alt="Líder 3" />
+        <img src="https://picsum.photos/1920/1080?random=4" alt="Líder 3" />
         <p>Juan David</p>
       </div>
     </div>

@@ -3,13 +3,13 @@
       <h2>Nuestras Marcas Asociadas</h2>
       <div class="carousel">
         <div class="carousel-item">
-          <img src="/f7.jpeg" alt="Marca 1" />
+          <img src="https://picsum.photos/1920/1080?random=5" alt="Marca 1" />
         </div>
         <div class="carousel-item">
-          <img src="/f5.jpeg" alt="Marca 2" />
+          <img src="https://picsum.photos/1920/1080?random=6" alt="Marca 2" />
         </div>
         <div class="carousel-item">
-          <img src="/f6.jpeg" alt="Marca 3" />
+          <img src="https://picsum.photos/1920/1080?random=7" alt="Marca 3" />
         </div>
       </div>
     </section>
