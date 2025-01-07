@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import PachamamaImage from '@/assets/Pachamama.jpeg';
+import PachamamaImage from '@/assets/PachamamaImage.jpeg';
 import CapitalSoftwareImage from '@/assets/CapitalSoftware.jpeg';
 import BlackSoulImage from '@/assets/BlackSoul.jpeg';
 
