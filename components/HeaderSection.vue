@@ -1,26 +1,14 @@
 <template>
   <header>
-    <h1>Bienvenido a Defense Innovation Corp</h1>
-    <p class="slogan">Defendiendo el futuro, con tecnología de vanguardia</p>
-    <a href="#services">Explora Nuestras Soluciones</a>
+    <h1>{{ $t('welcome') }}</h1>
+    <p class="slogan">{{ $t('slogan') }}</p>
+    <a :href="linkHref">{{ $t('explore') }}</a>
   </header>
 </template>
 
 <script>
 export default {
   props: {
-    title: {
-      type: String,
-      default: "Bienvenido a Defense Innovation Corp",
-    },
-    slogan: {
-      type: String,
-      default: "Defendiendo el futuro, con tecnología de vanguardia",
-    },
-    linkText: {
-      type: String,
-      default: "Explora Nuestras Soluciones",
-    },
     linkHref: {
       type: String,
       default: "#services",
