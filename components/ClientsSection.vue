@@ -43,6 +43,14 @@ const duplicatedClients = [...clients, ...clients];
 <style scoped>
 #clients {
   text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #001F3F;
 }
 
 .slider {
@@ -52,7 +60,7 @@ const duplicatedClients = [...clients, ...clients];
   margin: auto;
   overflow: hidden;
   position: relative;
-  width: 960px;
+  max-width: 100%;
 }
 
 .slider::before,
@@ -61,7 +69,7 @@ const duplicatedClients = [...clients, ...clients];
   content: "";
   height: 100px;
   position: absolute;
-  width: 200px;
+  width: 100px;
   z-index: 2;
 }
 
@@ -79,7 +87,7 @@ const duplicatedClients = [...clients, ...clients];
 .slide-track {
   animation: scroll 20s linear infinite;
   display: flex;
-  width: calc(250px * 6); /* 6 = número de slides duplicados */
+  width: calc(250px * 6); /* Ajusta según el número de slides duplicados */
 }
 
 .slide {
@@ -101,7 +109,76 @@ const duplicatedClients = [...clients, ...clients];
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 3)); /* 3 = número de slides originales */
+    transform: translateX(calc(-250px * 3)); /* Ajusta según el número de slides originales */
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .slider {
+    height: 80px;
+  }
+
+  .slider::before,
+  .slider::after {
+    height: 80px;
+    width: 50px;
+  }
+
+  .slide {
+    width: 200px;
+  }
+
+  .slide img {
+    max-height: 60px;
+    max-width: 150px;
+  }
+
+  .slide-track {
+    width: calc(200px * 6); /* Ajusta para dispositivos pequeños */
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-200px * 3));
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .slider {
+    height: 60px;
+  }
+
+  .slider::before,
+  .slider::after {
+    height: 60px;
+    width: 30px;
+  }
+
+  .slide {
+    width: 150px;
+  }
+
+  .slide img {
+    max-height: 50px;
+    max-width: 120px;
+  }
+
+  .slide-track {
+    width: calc(150px * 6); /* Ajusta para dispositivos muy pequeños */
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-150px * 3));
+    }
   }
 }
 </style>
