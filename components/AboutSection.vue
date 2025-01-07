@@ -1,10 +1,7 @@
 <template>
   <section id="about">
-    <h2>¿Quiénes Somos?</h2>
-    <p>
-      Defense Innovation Corp es una empresa que desarrolla tecnologías de vanguardia en la industria de la ciberseguridad y defensa, 
-      para empoderar a individuos y organizaciones con soluciones inteligentes que protegen vidas, bienes y patrimonios.
-    </p>
+    <h2>{{ $t('about.title') }}</h2>
+    <p>{{ $t('about.description') }}</p>
   </section>
 </template>
 
