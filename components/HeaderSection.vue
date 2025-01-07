@@ -1,13 +1,32 @@
 <template>
   <header>
     <h1>Bienvenido a Defense Innovation Corp</h1>
-    
+    <p class="slogan">Defendiendo el futuro, con tecnología de vanguardia</p>
     <a href="#services">Explora Nuestras Soluciones</a>
   </header>
 </template>
 
 <script>
-
+export default {
+  props: {
+    title: {
+      type: String,
+      default: "Bienvenido a Defense Innovation Corp",
+    },
+    slogan: {
+      type: String,
+      default: "Defendiendo el futuro, con tecnología de vanguardia",
+    },
+    linkText: {
+      type: String,
+      default: "Explora Nuestras Soluciones",
+    },
+    linkHref: {
+      type: String,
+      default: "#services",
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -24,8 +43,11 @@ header h1 {
   margin: 0;
 }
 
-header p {
+header .slogan {
   font-size: 1.5rem;
+  margin: 10px 0 20px;
+  font-style: italic;
+  color: #b0c4de; /* Azul claro para resaltar */
 }
 
 header a {
@@ -40,5 +62,17 @@ header a {
 
 header a:hover {
   background: #E67817;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  header .slogan {
+    font-size: 1.2rem;
+  }
+  header {
+    padding: 30px 10px;
+  }
 }
 </style>

@@ -1,93 +1,107 @@
 <template>
-    <section id="clients">
-      <h2>Nuestras Marcas Asociadas</h2>
-      <div class="carousel">
-        <div class="carousel-item">
-          <img src="https://picsum.photos/1920/1080?random=5" alt="Marca 1" />
-        </div>
-        <div class="carousel-item">
-          <img src="https://picsum.photos/1920/1080?random=6" alt="Marca 2" />
-        </div>
-        <div class="carousel-item">
-          <img src="https://picsum.photos/1920/1080?random=7" alt="Marca 3" />
+  <section id="clients">
+    <h2>Nuestras Marcas Asociadas</h2>
+    <div class="slider">
+      <div class="slide-track">
+        <div class="slide" v-for="(client, index) in duplicatedClients" :key="index">
+          <a :href="client.link" target="_blank" rel="noopener noreferrer">
+            <img :src="client.image" :alt="client.name" />
+          </a>
         </div>
       </div>
-    </section>
-  </template>
-  
-  <script setup>
-  import { onMounted } from 'vue';
-  
-  onMounted(() => {
-    const carousel = document.querySelector('.carousel');
-    const items = carousel.querySelectorAll('.carousel-item');
-    let currentIndex = 0;
-  
-    const updateCarousel = () => {
-      items.forEach((item) => {
-        item.style.transform = `translateX(-${currentIndex * 100}%)`;
-      });
-    };
-  
-    setInterval(() => {
-      currentIndex = (currentIndex + 1) % items.length;
-      updateCarousel();
-    }, 3000);
-  });
-  </script>
-  
-  <style scoped>
-  section {
-    padding: 50px 20px;
-    margin: 20px auto;
-    max-width: 900px;
-    text-align: center;
+    </div>
+  </section>
+</template>
+
+<script setup>
+import PachamamaImage from '@/assets/Pachamama.jpeg';
+import CapitalSoftwareImage from '@/assets/CapitalSoftware.jpeg';
+import BlackSoulImage from '@/assets/BlackSoul.jpeg';
+
+const clients = [
+  {
+    name: 'Pachamama',
+    link: 'https://www.linkedin.com/company/pachamama-pm/',
+    image: PachamamaImage,
+  },
+  {
+    name: 'Capital Software',
+    link: 'https://www.linkedin.com/company/capitalsoftware/',
+    image: CapitalSoftwareImage,
+  },
+  {
+    name: 'Black Soul Systems',
+    link: 'https://www.linkedin.com/company/black-soul-systems/?viewAsMember=true',
+    image: BlackSoulImage,
+  },
+];
+
+// Duplicamos los clientes para lograr el efecto infinito
+const duplicatedClients = [...clients, ...clients];
+</script>
+
+<style scoped>
+#clients {
+  text-align: center;
+}
+
+.slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 960px;
+}
+
+.slider::before,
+.slider::after {
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slide-track {
+  animation: scroll 20s linear infinite;
+  display: flex;
+  width: calc(250px * 6); /* 6 = número de slides duplicados */
+}
+
+.slide {
+  height: 100px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  max-height: 80px;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
   }
-  
-  .carousel {
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    gap: 10px;
-    justify-content: center;
+  100% {
+    transform: translateX(calc(-250px * 3)); /* 3 = número de slides originales */
   }
-  
-  .carousel-item {
-    flex: 0 0 auto;
-    text-align: center;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .carousel-item img {
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 0 auto;
-  }
-  
-  /* Media Queries for Responsiveness */
-  @media (max-width: 768px) {
-    .carousel-item img {
-      width: 100px;
-      height: 100px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .carousel {
-      gap: 5px;
-    }
-  
-    .carousel-item img {
-      width: 80px;
-      height: 80px;
-    }
-  
-    section h2 {
-      font-size: 1.2rem;
-    }
-  }
-  </style>
-  
+}
+</style>

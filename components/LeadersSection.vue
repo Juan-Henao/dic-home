@@ -1,5 +1,9 @@
 <script setup>
 import { onMounted } from 'vue';
+import gersonImage from '@/assets/Gerson.jpeg';
+import nicolasImage from '@/assets/Alfaro.jpeg';
+import henaoImage from '@/assets/Henao.jpg';
+import leonardoImage from '@/assets/Leonardo.jpeg';
 
 onMounted(() => {
   const carousel = document.querySelector('.carousel');
@@ -18,26 +22,29 @@ onMounted(() => {
   }, 3000);
 });
 </script>
-
 <template>
   <section id="leaders">
     <h2>Nuestros Líderes</h2>
     <div class="carousel">
       <div class="carousel-item">
-        <img src="https://picsum.photos/1920/1080?random=1" alt="Líder 1" />
+        <img :src="gersonImage" alt="Gerson - CEO-IA" />
         <p>Gerson</p>
+        <small>CEO-IA</small>
       </div>
       <div class="carousel-item">
-        <img src="https://picsum.photos/1920/1080?random=2" alt="Líder 2" />
-        <p>Leonardo</p>
-      </div>
-      <div class="carousel-item">
-        <img src="https://picsum.photos/1920/1080?random=3" alt="Líder 3" />
-        <p>Nicolas</p>
-      </div>
-      <div class="carousel-item">
-        <img src="https://picsum.photos/1920/1080?random=4" alt="Líder 3" />
+        <img :src="henaoImage" alt="Juan David - Líder del Equipo de Ingeniería" />
         <p>Juan David</p>
+        <small>Líder del Equipo de Ingeniería</small>
+      </div>
+      <div class="carousel-item">
+        <img :src="leonardoImage" alt="Leonardo - Líder de Investigación y Desarrollo" />
+        <p>Leonardo</p>
+        <small>Líder de Investigación, Desarrollo e Innovación (I+D+i)</small>
+      </div>
+      <div class="carousel-item">
+        <img :src="nicolasImage" alt="Nicolas - Director Jurídico" />
+        <p>Nicolas</p>
+        <small>Director Jurídico</small>
       </div>
     </div>
   </section>
@@ -70,5 +77,16 @@ section {
   border-radius: 50%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
+}
+
+.carousel-item p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+.carousel-item small {
+  font-size: 1rem;
+  color: #555;
 }
 </style>

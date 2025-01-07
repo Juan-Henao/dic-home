@@ -5,6 +5,8 @@
       <ServicesSection />
       <LeadersSection />
       <ClientsSection />
+      <TestimonySection />
+      <HowToStartSection />
       <ContactSection />
       <FooterSection />
     </div>
@@ -18,6 +20,7 @@
   import ClientsSection from '@/components/ClientsSection.vue';
   import ContactSection from '@/components/ContactSection.vue';
   import FooterSection from '@/components/FooterSection.vue';
+  import HowToStartSection from '@/components/HowToStartSection.vue';
   import { onMounted } from 'vue';
 
 onMounted(() => {
