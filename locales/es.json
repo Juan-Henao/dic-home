@@ -6,7 +6,124 @@
   "about": {
     "title": "¿Quiénes Somos?",
     "description": "Defense Innovation Corp es una empresa que desarrolla tecnologías de vanguardia en la industria de la ciberseguridad y defensa, para empoderar a individuos y organizaciones con soluciones inteligentes que protegen vidas, bienes y patrimonios."
-  }
+  },
+  
+    "clients": {
+      "title": "Nuestras Marcas Asociadas",
+      "names": {
+        "pachamama": "Pachamama",
+        "capitalSoftware": "Capital Software",
+        "blackSoulSystems": "Black Soul Systems"
+      }
+    },
+
+      "contact": {
+        "title": "¿Estás Listo para Comenzar?",
+        "description": "Descubre cómo la automatización con inteligencia artificial puede transformar tus operaciones empresariales. Aumenta la velocidad, mejora la precisión y potencia la productividad de tu negocio como nunca antes.",
+        "cta": "Agenda una llamada con nosotros"
+      },
+      
+        "footer": {
+          "rights": "Defence Innovation Corp. Todos los derechos reservados."
+        }
+        ,
+        
+          "steps": {
+            "title": "Cómo empezar",
+            "description": "Libere el poder de la automatización de la IA para transformar los procesos rutinarios, garantizando la precisión, la disponibilidad 24/7 y un importante ahorro de costes.",
+            "steps": {
+              "1": {
+                "title": "01. Háblanos por privado",
+                "description": "Vamos a analizar si realmente podemos ayudarte."
+              },
+              "2": {
+                "title": "02. Empecemos la Consultoría",
+                "description": "Agendemos una llamada estratégica donde vamos a analizar todos los procesos de tu negocio."
+              },
+              "3": {
+                "title": "03. Análisis Back Office",
+                "description": "Te prepararemos un entregable con todas las soluciones de IA aplicables a tu negocio."
+              },
+              "4": {
+                "title": "04. Plan de Acción",
+                "description": "Finalmente, nos pondremos de acuerdo para empezar a desarrollar soluciones personalizadas de IA."
+              }
+            }
+          },
+          
+            "leaders": {
+              "title": "Nuestros Líderes",
+              "gerson": {
+                "name": "Gerson",
+                "role": "CEO-IA"
+              },
+              "henao": {
+                "name": "Juan David",
+                "role": "Líder del Equipo de Ingeniería"
+              },
+              "leonardo": {
+                "name": "Leonardo",
+                "role": "Líder de Investigación, Desarrollo e Innovación (I+D+i)"
+              },
+              "nicolas": {
+                "name": "Nicolas",
+                "role": "Director Jurídico"
+              }
+            },
+            
+              "services": {
+                "title": "¿Qué Hacemos?",
+                "items": {
+                  "aiAgents": {
+                    "title": "Agentes de IA",
+                    "description": "Desarrollamos agentes de inteligencia artificial personalizados que optimizan procesos y ofrecen soluciones inteligentes a problemas complejos."
+                  },
+                  "techConsulting": {
+                    "title": "Consultoría Tecnológica",
+                    "description": "Ofrecemos asesoramiento experto para implementar tecnologías de vanguardia que transformen tu negocio y lo preparen para el futuro."
+                  },
+                  "cyberSecurity": {
+                    "title": "Ciberseguridad",
+                    "description": "Proveemos soluciones avanzadas para proteger sistemas, datos y redes contra amenazas digitales y garantizar la seguridad de tu organización."
+                  }
+                }
+              },
+              
+                "testimonios": {
+                  "title": "Testimonios",
+                  "description": "Conoce lo que nuestros clientes dicen sobre nosotros y cómo hemos transformado sus negocios con nuestras soluciones innovadoras.",
+                  "items": {
+                    "1": {
+                      "comment": "Gracias a DIC, logramos automatizar nuestros procesos y aumentar la eficiencia de nuestro equipo en más del 40%. Su servicio es impecable.",
+                      "name": "Carolina López"
+                    },
+                    "2": {
+                      "comment": "La seguridad de nuestra infraestructura digital ha mejorado significativamente gracias a las soluciones de ciberseguridad que implementaron. ¡Altamente recomendados!",
+                      "name": "Alejandro Martínez"
+                    },
+                    "3": {
+                      "comment": "La consultoría tecnológica fue clave para optimizar nuestros sistemas. Ahora somos más rápidos y precisos en todas nuestras operaciones.",
+                      "name": "Sofía Ramírez"
+                    },
+                    "4": {
+                      "comment": "Las herramientas que implementaron para nuestra empresa han sido transformadoras. Excelente equipo de trabajo.",
+                      "name": "María González"
+                    },
+                    "5": {
+                      "comment": "Estamos más protegidos contra ataques digitales gracias a DIC. Su experiencia en ciberseguridad es invaluable.",
+                      "name": "Javier Torres"
+                    },
+                    "6": {
+                      "comment": "El equipo de DIC superó nuestras expectativas. Su enfoque estratégico y sus soluciones personalizadas marcaron la diferencia.",
+                      "name": "Luisa Fernández"
+                    }
+                  }
+                }
+                            
+                        
+      
+      
+ 
 
 
 }

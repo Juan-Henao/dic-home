@@ -1,9 +1,36 @@
 <script setup>
 import { onMounted } from 'vue';
+import { useI18n } from 'vue-i18n';
+
 import gersonImage from '@/assets/Gerson.jpeg';
 import nicolasImage from '@/assets/Alfaro.jpeg';
 import henaoImage from '@/assets/Henao.jpg';
 import leonardoImage from '@/assets/Leonardo.jpeg';
+
+const { t } = useI18n();
+
+const leaders = [
+  {
+    name: t('leaders.gerson.name'),
+    role: t('leaders.gerson.role'),
+    image: gersonImage,
+  },
+  {
+    name: t('leaders.henao.name'),
+    role: t('leaders.henao.role'),
+    image: henaoImage,
+  },
+  {
+    name: t('leaders.leonardo.name'),
+    role: t('leaders.leonardo.role'),
+    image: leonardoImage,
+  },
+  {
+    name: t('leaders.nicolas.name'),
+    role: t('leaders.nicolas.role'),
+    image: nicolasImage,
+  },
+];
 
 onMounted(() => {
   const carousel = document.querySelector('.carousel');
@@ -22,29 +49,15 @@ onMounted(() => {
   }, 3000);
 });
 </script>
+
 <template>
   <section id="leaders">
-    <h2>Nuestros Líderes</h2>
+    <h2>{{ $t('leaders.title') }}</h2>
     <div class="carousel">
-      <div class="carousel-item">
-        <img :src="gersonImage" alt="Gerson - CEO-IA" />
-        <p>Gerson</p>
-        <small>CEO-IA</small>
-      </div>
-      <div class="carousel-item">
-        <img :src="henaoImage" alt="Juan David - Líder del Equipo de Ingeniería" />
-        <p>Juan David</p>
-        <small>Líder del Equipo de Ingeniería</small>
-      </div>
-      <div class="carousel-item">
-        <img :src="leonardoImage" alt="Leonardo - Líder de Investigación y Desarrollo" />
-        <p>Leonardo</p>
-        <small>Líder de Investigación, Desarrollo e Innovación (I+D+i)</small>
-      </div>
-      <div class="carousel-item">
-        <img :src="nicolasImage" alt="Nicolas - Director Jurídico" />
-        <p>Nicolas</p>
-        <small>Director Jurídico</small>
+      <div class="carousel-item" v-for="(leader, index) in leaders" :key="index">
+        <img :src="leader.image" :alt="leader.name" />
+        <p>{{ leader.name }}</p>
+        <small>{{ leader.role }}</small>
       </div>
     </div>
   </section>

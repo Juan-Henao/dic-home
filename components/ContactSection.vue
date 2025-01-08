@@ -1,12 +1,9 @@
 <template>
   <section id="contact">
-    <h2>¿Estás Listo para Comenzar?</h2>
-    <p>
-      Descubre cómo la automatización con inteligencia artificial puede transformar tus operaciones empresariales. 
-      Aumenta la velocidad, mejora la precisión y potencia la productividad de tu negocio como nunca antes.
-    </p>
+    <h2>{{ $t('contact.title') }}</h2>
+    <p>{{ $t('contact.description') }}</p>
     <a href="https://calendly.com/juan-henao-eam/30min" target="_blank" class="calendly-link">
-      Agenda una llamada con nosotros
+      {{ $t('contact.cta') }}
     </a>
   </section>
 </template>

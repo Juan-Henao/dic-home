@@ -1,11 +1,15 @@
 <template>
   <section id="clients">
-    <h2>Nuestras Marcas Asociadas</h2>
+    <h2>{{ $t('clients.title') }}</h2>
     <div class="slider">
-      <div class="slide-track">
-        <div class="slide" v-for="(client, index) in duplicatedClients" :key="index">
+      <div class="slide-track" ref="slideTrack">
+        <div
+          class="slide"
+          v-for="(client, index) in [clients[clients.length - 1], ...clients, clients[0]]"
+          :key="index"
+        >
           <a :href="client.link" target="_blank" rel="noopener noreferrer">
-            <img :src="client.image" :alt="client.name" />
+            <img :src="client.image" :alt="$t(`clients.names.${client.name}`)" />
           </a>
         </div>
       </div>
@@ -14,30 +18,69 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue';
+
 import PachamamaImage from '@/assets/PachamamaImage.jpeg';
 import CapitalSoftwareImage from '@/assets/CapitalSoftware.jpeg';
 import BlackSoulImage from '@/assets/BlackSoul.jpeg';
 
 const clients = [
   {
-    name: 'Pachamama',
+    name: 'pachamama',
     link: 'https://www.linkedin.com/company/pachamama-pm/',
     image: PachamamaImage,
   },
   {
-    name: 'Capital Software',
+    name: 'capitalSoftware',
     link: 'https://www.linkedin.com/company/capitalsoftware/',
     image: CapitalSoftwareImage,
   },
   {
-    name: 'Black Soul Systems',
+    name: 'blackSoulSystems',
     link: 'https://www.linkedin.com/company/black-soul-systems/?viewAsMember=true',
     image: BlackSoulImage,
   },
 ];
 
-// Duplicamos los clientes para lograr el efecto infinito
-const duplicatedClients = [...clients, ...clients];
+const slideTrack = ref(null);
+
+onMounted(() => {
+  const track = slideTrack.value;
+  const slides = track.children;
+  let currentIndex = 1; // Empieza en el primer slide real (después del duplicado inicial)
+  const totalSlides = slides.length;
+
+  // Configuración inicial
+  track.style.transition = 'transform 1s linear';
+  track.style.transform = `translateX(-${100 * currentIndex}%)`;
+
+  const updateCarousel = () => {
+    currentIndex++;
+    track.style.transition = 'transform 1s linear';
+    track.style.transform = `translateX(-${100 * currentIndex}%)`;
+
+    // Cuando llegamos al final del track, reinicia al principio
+    if (currentIndex === totalSlides - 1) {
+      setTimeout(() => {
+        track.style.transition = 'none'; // Desactiva la transición para evitar parpadeos
+        currentIndex = 1; // Reinicia al primer slide real
+        track.style.transform = `translateX(-${100 * currentIndex}%)`;
+      }, 1000); // El tiempo coincide con la duración de la animación (1s)
+    }
+
+    // Cuando volvemos al principio desde el último duplicado
+    if (currentIndex === 0) {
+      setTimeout(() => {
+        track.style.transition = 'none'; // Desactiva la transición para evitar parpadeos
+        currentIndex = totalSlides - 2; // Reinicia al último slide real
+        track.style.transform = `translateX(-${100 * currentIndex}%)`;
+      }, 1000);
+    }
+  };
+
+  // Intervalo para animar el carrusel
+  setInterval(updateCarousel, 3000);
+});
 </script>
 
 <style scoped>
@@ -54,45 +97,21 @@ h2 {
 }
 
 .slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: auto;
   background: white;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-  height: 100px;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-  max-width: 100%;
-}
-
-.slider::before,
-.slider::after {
-  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-  content: "";
-  height: 100px;
-  position: absolute;
-  width: 100px;
-  z-index: 2;
-}
-
-.slider::after {
-  right: 0;
-  top: 0;
-  transform: rotateZ(180deg);
-}
-
-.slider::before {
-  left: 0;
-  top: 0;
 }
 
 .slide-track {
-  animation: scroll 20s linear infinite;
   display: flex;
-  width: calc(250px * 6); /* Ajusta según el número de slides duplicados */
+  transition: transform 1s linear;
 }
 
 .slide {
-  height: 100px;
-  width: 250px;
+  flex: 0 0 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,83 +121,5 @@ h2 {
   max-height: 80px;
   max-width: 200px;
   object-fit: contain;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-250px * 3)); /* Ajusta según el número de slides originales */
-  }
-}
-
-/* Responsividad */
-@media (max-width: 768px) {
-  .slider {
-    height: 80px;
-  }
-
-  .slider::before,
-  .slider::after {
-    height: 80px;
-    width: 50px;
-  }
-
-  .slide {
-    width: 200px;
-  }
-
-  .slide img {
-    max-height: 60px;
-    max-width: 150px;
-  }
-
-  .slide-track {
-    width: calc(200px * 6); /* Ajusta para dispositivos pequeños */
-  }
-
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-200px * 3));
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .slider {
-    height: 60px;
-  }
-
-  .slider::before,
-  .slider::after {
-    height: 60px;
-    width: 30px;
-  }
-
-  .slide {
-    width: 150px;
-  }
-
-  .slide img {
-    max-height: 50px;
-    max-width: 120px;
-  }
-
-  .slide-track {
-    width: calc(150px * 6); /* Ajusta para dispositivos muy pequeños */
-  }
-
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-150px * 3));
-    }
-  }
 }
 </style>
