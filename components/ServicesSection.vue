@@ -1,22 +1,35 @@
 <template>
   <section id="services">
-    <h2>¿Qué Hacemos?</h2>
+    <h2>{{ $t('services.title') }}</h2>
     <div class="services">
-      <div class="service">
-        <h3>Agentes de IA</h3>
-        <p>Desarrollamos agentes de inteligencia artificial personalizados que optimizan procesos y ofrecen soluciones inteligentes a problemas complejos.</p>
-      </div>
-      <div class="service">
-        <h3>Consultoría Tecnológica</h3>
-        <p>Ofrecemos asesoramiento experto para implementar tecnologías de vanguardia que transformen tu negocio y lo preparen para el futuro.</p>
-      </div>
-      <div class="service">
-        <h3>Ciberseguridad</h3>
-        <p>Proveemos soluciones avanzadas para proteger sistemas, datos y redes contra amenazas digitales y garantizar la seguridad de tu organización.</p>
+      <div class="service" v-for="(service, index) in services" :key="index">
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
       </div>
     </div>
   </section>
 </template>
+
+<script setup>
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+
+const services = [
+  {
+    title: t('services.items.aiAgents.title'),
+    description: t('services.items.aiAgents.description'),
+  },
+  {
+    title: t('services.items.techConsulting.title'),
+    description: t('services.items.techConsulting.description'),
+  },
+  {
+    title: t('services.items.cyberSecurity.title'),
+    description: t('services.items.cyberSecurity.description'),
+  },
+];
+</script>
 
 <style scoped>
 section {

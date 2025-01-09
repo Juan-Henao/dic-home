@@ -1,9 +1,125 @@
 {
-  "welcome": "Welcome to Defense Innovation Corp",
+  "welcome": "DIC",
+  "fullname":"Defense Innovation Corp",
   "explore": "Explore Our Solutions",
   "slogan": "Defending the future with cutting-edge technology",
   "about": {
     "title": "Who We Are",
-    "description": "Defense Innovation Corp develops cutting-edge technologies in the cybersecurity and defense industries to empower individuals and organizations with intelligent solutions that protect lives, assets, and heritage."
-  }
+    "description": "DIC develops cutting-edge technologies in the cybersecurity and defense industries to empower individuals and organizations with intelligent solutions that protect lives, assets, and heritage."
+  },
+  "clients": {
+    "title": "Our Associated Brands",
+    "names": {
+      "pachamama": "Pachamama",
+      "capitalSoftware": "Capital Software",
+      "blackSoulSystems": "Black Soul Systems"
+    }
+  },
+  "contact": {
+    "title": "Are You Ready to Get Started?",
+    "description": "Discover how AI automation can transform your business operations. Increase speed, enhance precision, and boost productivity like never before.",
+    "cta": "Schedule a call with us"
+  },
+  "footer": {
+    "rights": "Defense Innovation Corp. All rights reserved."
+  },
+      
+      "steps": {
+        "title": "How to Start",
+        "description": "Unlock the power of AI automation to transform routine processes, ensuring precision, 24/7 availability, and significant cost savings.",
+        "steps": {
+          "1": {
+            "title": "01. Talk to Us Privately",
+            "description": "Let's analyze if we can truly help you."
+          },
+          "2": {
+            "title": "02. Start the Consultation",
+            "description": "Let's schedule a strategic call to analyze all your business processes."
+          },
+          "3": {
+            "title": "03. Back Office Analysis",
+            "description": "We will prepare a deliverable with all AI solutions applicable to your business."
+          },
+          "4": {
+            "title": "04. Action Plan",
+            "description": "Finally, we will agree to start developing customized AI solutions."
+          }
+        }
+      },
+      
+        "leaders": {
+          "title": "Our Leaders",
+          "gerson": {
+            "name": "Gerson",
+            "role": "CEO-IA"
+          },
+          "henao": {
+            "name": "Juan David",
+            "role": "Engineering Team Leader"
+          },
+          "leonardo": {
+            "name": "Leonardo",
+            "role": "R&D&I Leader (I+D+i)"
+          },
+          "nicolas": {
+            "name": "Nicolas",
+            "role": "Legal Director"
+          }
+        },
+        
+          "services": {
+            "title": "What We Do",
+            "items": {
+              "aiAgents": {
+                "title": "AI Agents",
+                "description": "We develop customized artificial intelligence agents that optimize processes and provide intelligent solutions to complex problems."
+              },
+              "techConsulting": {
+                "title": "Technological Consulting",
+                "description": "We offer expert advice to implement cutting-edge technologies that transform your business and prepare it for the future."
+              },
+              "cyberSecurity": {
+                "title": "Cybersecurity",
+                "description": "We provide advanced solutions to protect systems, data, and networks from digital threats and ensure your organization's security."
+              }
+            }
+          },
+          
+            "testimonios": {
+              "title": "Testimonials",
+              "description": "Hear what our clients say about us and how we have transformed their businesses with our innovative solutions.",
+              "items": {
+                "1": {
+                  "comment": "Thanks to DIC, we automated our processes and increased our team's efficiency by more than 40%. Their service is impeccable.",
+                  "name": "Carolina López"
+                },
+                "2": {
+                  "comment": "The security of our digital infrastructure has significantly improved thanks to the cybersecurity solutions they implemented. Highly recommended!",
+                  "name": "Alejandro Martínez"
+                },
+                "3": {
+                  "comment": "The technological consultancy was key to optimizing our systems. We are now faster and more precise in all our operations.",
+                  "name": "Sofía Ramírez"
+                },
+                "4": {
+                  "comment": "The tools they implemented for our company have been transformative. Excellent team to work with.",
+                  "name": "María González"
+                },
+                "5": {
+                  "comment": "We are more protected against digital attacks thanks to DIC. Their expertise in cybersecurity is invaluable.",
+                  "name": "Javier Torres"
+                },
+                "6": {
+                  "comment": "The DIC team exceeded our expectations. Their strategic approach and personalized solutions made a big difference.",
+                  "name": "Luisa Fernández"
+                }
+              }
+            }
+                    
+                
+            
+    
+    
+  
+  
 }

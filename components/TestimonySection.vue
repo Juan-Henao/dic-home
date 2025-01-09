@@ -1,73 +1,61 @@
 <template>
-    <section id="testimonios">
-      <h2>Testimonios</h2>
-      <p>Conoce lo que nuestros clientes dicen sobre nosotros y cómo hemos transformado sus negocios con nuestras soluciones innovadoras.</p>
-      <div class="carousel-container">
-        <div class="carousel">
-          <TestimonyCard
-            v-for="(testimonio, index) in testimonios"
-            :key="index"
-            :stars="testimonio.stars"
-            :comment="testimonio.comment"
-            :name="testimonio.name"
-            class="carousel-item"
-          />
-        </div>
+  <section id="testimonios">
+    <h2>{{ $t('testimonios.title') }}</h2>
+    <p>{{ $t('testimonios.description') }}</p>
+    <div class="carousel-container">
+      <div class="carousel">
+        <TestimonyCard
+          v-for="(testimonio, index) in testimonios"
+          :key="index"
+          :stars="testimonio.stars"
+          :comment="testimonio.comment"
+          :name="testimonio.name"
+          class="carousel-item"
+        />
       </div>
-    </section>
-  </template>
-  
-  <script>
-  import TestimonyCard from './TestimonyCard.vue';
-  
-  export default {
-    components: {
-      TestimonyCard,
-    },
-    data() {
-      return {
-        testimonios: [
-          {
-            stars: '★★★★☆',
-            comment:
-              'Gracias a DIC, logramos automatizar nuestros procesos y aumentar la eficiencia de nuestro equipo en más del 40%. Su servicio es impecable.',
-            name: 'Carolina López',
-          },
-          {
-            stars: '★★★★★',
-            comment:
-              'La seguridad de nuestra infraestructura digital ha mejorado significativamente gracias a las soluciones de ciberseguridad que implementaron. ¡Altamente recomendados!',
-            name: 'Alejandro Martínez',
-          },
-          {
-            stars: '★★★★★',
-            comment:
-              'La consultoría tecnológica fue clave para optimizar nuestros sistemas. Ahora somos más rápidos y precisos en todas nuestras operaciones.',
-            name: 'Sofía Ramírez',
-          },
-          {
-            stars: '★★★★☆',
-            comment:
-              'Las herramientas que implementaron para nuestra empresa han sido transformadoras. Excelente equipo de trabajo.',
-            name: 'María González',
-          },
-          {
-            stars: '★★★★★',
-            comment:
-              'Estamos más protegidos contra ataques digitales gracias a DIC. Su experiencia en ciberseguridad es invaluable.',
-            name: 'Javier Torres',
-          },
-          {
-            stars: '★★★★★',
-            comment:
-              'El equipo de DIC superó nuestras expectativas. Su enfoque estratégico y sus soluciones personalizadas marcaron la diferencia.',
-            name: 'Luisa Fernández',
-          },
-        ],
-      };
-    },
-  };
-  </script>
+    </div>
+  </section>
+</template>
+
+<script setup>
+import { useI18n } from 'vue-i18n';
+import TestimonyCard from './TestimonyCard.vue';
+
+const { t } = useI18n();
+
+const testimonios = [
+  {
+    stars: '★★★★☆',
+    comment: t('testimonios.items.1.comment'),
+    name: t('testimonios.items.1.name'),
+  },
+  {
+    stars: '★★★★★',
+    comment: t('testimonios.items.2.comment'),
+    name: t('testimonios.items.2.name'),
+  },
+  {
+    stars: '★★★★★',
+    comment: t('testimonios.items.3.comment'),
+    name: t('testimonios.items.3.name'),
+  },
+  {
+    stars: '★★★★☆',
+    comment: t('testimonios.items.4.comment'),
+    name: t('testimonios.items.4.name'),
+  },
+  {
+    stars: '★★★★★',
+    comment: t('testimonios.items.5.comment'),
+    name: t('testimonios.items.5.name'),
+  },
+  {
+    stars: '★★★★★',
+    comment: t('testimonios.items.6.comment'),
+    name: t('testimonios.items.6.name'),
+  },
+];
+</script>
   
   <style scoped>
   #testimonios {
