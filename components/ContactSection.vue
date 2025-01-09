@@ -2,9 +2,10 @@
   <section id="contact">
     <h2>{{ $t('contact.title') }}</h2>
     <p>{{ $t('contact.description') }}</p>
-    <a href="https://calendly.com/juan-henao-eam/30min" target="_blank" class="calendly-link">
+    <a href="https://calendly.com/defenseic888/30min" target="_blank" class="calendly-link">
       {{ $t('contact.cta') }}
     </a>
+    
   </section>
 </template>
 
