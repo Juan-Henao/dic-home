@@ -2,7 +2,7 @@
 import { onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 
-import gersonImage from '@/assets/Gerson.jpeg';
+import gersonImage from '@/assets/Gerson.jpg';
 import nicolasImage from '@/assets/Alfaro.jpeg';
 import henaoImage from '@/assets/Henao.jpg';
 import leonardoImage from '@/assets/Leonardo.jpeg';

@@ -1,10 +1,11 @@
 {
-  "welcome": "Welcome to Defense Innovation Corp",
+  "welcome": "Welcome to DIC",
+  "fullname":"Defense Innovation Corp",
   "explore": "Explore Our Solutions",
   "slogan": "Defending the future with cutting-edge technology",
   "about": {
     "title": "Who We Are",
-    "description": "Defense Innovation Corp develops cutting-edge technologies in the cybersecurity and defense industries to empower individuals and organizations with intelligent solutions that protect lives, assets, and heritage."
+    "description": "DIC develops cutting-edge technologies in the cybersecurity and defense industries to empower individuals and organizations with intelligent solutions that protect lives, assets, and heritage."
   },
   "clients": {
     "title": "Our Associated Brands",
