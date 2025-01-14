@@ -8,16 +8,14 @@
           allowfullscreen
         ></iframe>
       </div>
-    </section>
+      </section>
   </template>
+
   
   <script setup>
-  import { useI18n } from 'vue-i18n';
-  
-  // Agrega los parámetros para reproducción automática y silencio
-  const videoUrl =
-    "https://www.youtube.com/embed/YUMdd27gYbk?autoplay=1&mute=1&loop=1";
-  // Reemplaza "your_video_id" con el ID real de tu video de YouTube.
+   const videoUrl =
+    "https://www.youtube.com/embed/CgoqW-mDfK8?autoplay=1&mute=1&loop=1&playlist=CgoqW-mDfK8";
+    
   </script>
   
   <style scoped>
