@@ -3,7 +3,7 @@
     <p>&copy; 2025 {{ $t('footer.rights') }}</p>
     <div class="social-links">
       <a
-        href="https://www.linkedin.com/company/dicsec/posts/?feedView=all"
+        href="https://www.linkedin.com/company/dicsec/"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="LinkedIn"
