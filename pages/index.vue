@@ -66,9 +66,6 @@ onMounted(() => {
   window.addEventListener('scroll', revealSection);
   revealSection();
 });
-
-const cookieLocale = useCookie('locale');
-
   
 
 </script>
