@@ -1,11 +1,15 @@
 {
-  "welcome": "DIC",
+  "welcome": "D.I.C",
   "fullname": "Defense Innovation Corp",
   "explore": "Explore Our Solutions",
   "slogan": "Defending the future with cutting-edge technology",
   "about": {
     "title": "Who We Are",
     "description": "At DIC, we are a company dedicated to developing cutting-edge technology in the areas of Artificial Intelligence, Custom Software, and Cybersecurity. We specialize in process automation and the creation of intelligent solutions through AI agents, designed to empower and enhance individuals, organizations, and businesses."
+  },
+  "meta": {
+    "title": "DIC - Innovation in Technology and Cybersecurity",
+    "description": "DIC (Defense Innovation Corp) provides cutting-edge innovation in artificial intelligence, cybersecurity and technological solutions. Meet our leaders, collaborators, services, and testimonials from satisfied clients. Transform your business with DIC!"
   },
   "clients": {
     "title": "Our Associated Brands",

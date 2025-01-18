@@ -1,11 +1,15 @@
 {
-  "welcome": "DIC",
+  "welcome": "D.I.C",
   "fullname": "Defense Innovation Corp",
   "explore": "Explora Nuestras Soluciones",
   "slogan": "Defendiendo el futuro, con tecnología de vanguardia",
   "about": {
     "title": "¿Quiénes Somos?",
     "description": "En DIC, somos una empresa dedicada al desarrollo de tecnología de vanguardia en las áreas de Inteligencia Artificial, Software a la Medida y Ciberseguridad. Nos especializamos en la automatización de procesos y en la creación de soluciones inteligentes mediante agentes de IA, diseñados para empoderar y potenciar a individuos, organizaciones y empresas."
+  },
+  "meta": {
+    "title": "DIC - Innovación en Tecnología y Ciberseguridad",
+    "description": "DIC (Defense Innovation Corp) ofrece innovación y tecnología de vanguardia en ciberseguridad, inteligencia artificial y soluciones tecnológicas. Conoce nuestros líderes, colaboradores, servicios y testimonios de clientes satisfechos. ¡Transforma tu negocio con DIC!"
   },
   "clients": {
     "title": "Nuestras Marcas Asociadas",
@@ -110,7 +114,7 @@
         "name": "Luisa Fernández"
       }
     }
-  } ,  
+  },
   "collaborators": {
     "title": "Nuestros Colaboradores",
     "description": "Conoce a las personas talentosas que trabajan en nuestros proyectos, impulsando la innovación y el éxito.",
