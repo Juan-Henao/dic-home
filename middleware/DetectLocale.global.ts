@@ -17,7 +17,6 @@ export default defineNuxtRouteMiddleware((to,from) => {
     // Por ejemplo, puedes usar el encabezado Accept-Language
       const req = useRequestHeaders();
       const acceptLanguage = req['accept-language'];
-      console.log(acceptLanguage);
       if (acceptLanguage) {
         const locales = acceptLanguage.split(',');
         if (locales.length > 0) {
