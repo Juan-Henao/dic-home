@@ -2,8 +2,12 @@
 export default defineNuxtRouteMiddleware((to,from) => {
 
 
-    const cookieLocale = useCookie('locale');
-     if (!cookieLocale.value) {
+  const cookieLocale = useCookie('locale', {
+    sameSite: 'Lax', // La cookie solo será enviada para solicitudes de navegación del mismo dominio
+    maxAge: 60 * 60 * 24 * 365, // Opcional: duración de la cookie (en segundos)
+    
+  });
+       if (!cookieLocale.value) {
       // Detectar el idioma preferido del usuario
       const preferredLocale = detectUserLocale(); // Implementa esta función según tus necesidades
       cookieLocale.value = preferredLocale;
