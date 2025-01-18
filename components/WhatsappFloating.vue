@@ -1,5 +1,5 @@
 <template>
-    <a href="https://wa.me/3205960962" target="_blank" class="floating-button" title="Contáctanos por WhatsApp">
+    <a href="https://wa.me/573205960962" target="_blank" class="floating-button" title="Contáctanos por WhatsApp">
         <img src="@/assets/icons/whatsapp.svg" alt="Facebook" />
     </a>
 </template>
