@@ -12,6 +12,20 @@ export default defineNuxtConfig({
         },
       ],
     },
+    htmlAttrs: {
+      lang: 'en', // Cambiar dinámicamente si es necesario
+    },
     
+  },
+  modules: ['@nuxtjs/robots'],
+  robots: {
+    UserAgent: '*',
+    Disallow: '',
+    Sitemap: 'https://www.dic.com.co/sitemap.xml',
+    autoI18n: {
+      locales: [{ code: 'en' }, { code: 'es' }],
+      defaultLocale: 'en',
+      strategy: 'prefix',
+    },
   },
 })
