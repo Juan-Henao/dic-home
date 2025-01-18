@@ -32,7 +32,6 @@ import { onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
-
 useHead({
   title: t('meta.title'), 
   meta: [
@@ -67,5 +66,10 @@ onMounted(() => {
   window.addEventListener('scroll', revealSection);
   revealSection();
 });
+
+const cookieLocale = useCookie('locale');
+
+  
+
 </script>
 

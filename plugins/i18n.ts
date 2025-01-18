@@ -9,7 +9,7 @@ export default defineNuxtPlugin(({ vueApp }) => {
   const i18n = createI18n({
     legacy: false,
     globalInjection: true,
-    locale: cookieLocale.value || 'en', // Usar el idioma de la cookie o el predeterminado
+    locale: cookieLocale.value ?? 'en', // Usar el idioma de la cookie o el predeterminado
     fallbackLocale: 'en',
     messages: {
       en,
