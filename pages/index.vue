@@ -10,6 +10,7 @@
       <TestimonySection />
       <HowToStartSection />
       <ContactSection />
+      <WhatsappFloating />
       <FooterSection />
     </div>
   </template>
@@ -22,10 +23,30 @@
   import ClientsSection from '@/components/ClientsSection.vue';
   import CollaboratorsSection from '@/components/CollaboratorsSection.vue';
   import ContactSection from '@/components/ContactSection.vue';
+  import WhatsappFloating from '~/components/WhatsappFloating.vue';
   import FooterSection from '@/components/FooterSection.vue';
   import HowToStartSection from '@/components/HowToStartSection.vue';
-  import { onMounted } from 'vue';
-import TrailerSection from '~/components/TrailerSection.vue';
+  import TrailerSection from '~/components/TrailerSection.vue';
+
+import { onMounted } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+useHead({
+  title: t('meta.title'), 
+  meta: [
+    {
+      name: 'description',
+      content: t('meta.description'), 
+    },
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://www.dic.com.co' + useRoute().path,
+    },
+  ],
+});
 
 onMounted(() => {
   const sections = document.querySelectorAll('section');
@@ -45,7 +66,10 @@ onMounted(() => {
   window.addEventListener('scroll', revealSection);
   revealSection();
 });
-</script>
 
+const cookieLocale = useCookie('locale');
 
   
+
+</script>
+
