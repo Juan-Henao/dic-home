@@ -26,7 +26,7 @@
 footer {
   text-align: center;
   padding: 10px;
-  background: #001f3f;
+  background: linear-gradient(135deg, #1c0b40, #3b8c75);
   color: white;
 }
 
