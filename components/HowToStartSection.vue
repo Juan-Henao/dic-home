@@ -51,7 +51,7 @@ const steps = [
 .descripcion {
   flex: 1;
   padding: 20px;
-  background-color: #001F3F;
+  background: linear-gradient(135deg, #1c0b40, #3b8c75);
   color: white;
   border-radius: 8px;
   margin-right: 20px;
