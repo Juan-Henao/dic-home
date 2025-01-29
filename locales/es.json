@@ -8,8 +8,8 @@
     "description": "En DIC, somos una empresa dedicada al desarrollo de tecnología de vanguardia en las áreas de Inteligencia Artificial, Software a la Medida y Ciberseguridad. Nos especializamos en la automatización de procesos y en la creación de soluciones inteligentes mediante agentes de IA, diseñados para empoderar y potenciar a individuos, organizaciones y empresas."
   },
   "meta": {
-    "title": "DIC - Innovación en Tecnología y Ciberseguridad",
-    "description": "DIC (Defense Innovation Corp) ofrece innovación y tecnología de vanguardia en ciberseguridad, inteligencia artificial y soluciones tecnológicas. Conoce nuestros líderes, colaboradores, servicios y testimonios de clientes satisfechos. ¡Transforma tu negocio con DIC!"
+    "title": "DIC - Innovación en Tecnología, IA y Ciberseguridad",
+    "description": "DIC (Defense Innovation Corp) ofrece tecnología de vanguardia en ciberseguridad, inteligencia artificial y soluciones tecnológicas. ¡Transforma tu negocio con DIC!"
   },
   "clients": {
     "title": "Nuestras Marcas Asociadas",
@@ -120,9 +120,24 @@
     "description": "Conoce a las personas talentosas que trabajan en nuestros proyectos, impulsando la innovación y el éxito.",
     "items": {
       "angie": {
-        "name": "Angie Diaz",
+        "name": "Angie Díaz",
         "role": "Desarrolladora de Software",
-        "description": "Enfocada en sistemas backend y Frontend."
+        "description": "Enfocada en sistemas backend y frontend."
+      },
+      "victor": {
+        "name": "Víctor García",
+        "role": "Desarrollador Móvil",
+        "description": "Enfocado en el desarrollo móvil."
+      },
+      "daniela": {
+        "name": "Daniela Villalba",
+        "role": "Desarrolladora de Software",
+        "description": "Enfocada en el desarrollo frontend y backend."
+      },
+      "cristian": {
+        "name": "Cristian Trilleras",
+        "role": "Desarrollador de Software",
+        "description": "Enfocado en desarrollo Fullstack."
       }
     }
   }
